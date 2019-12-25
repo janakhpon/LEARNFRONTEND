@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            background: midnightblue;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            margin: 2rem;
+            padding: 2rem;
+        }
+
+        .container-item {
+            flex: 0 1 auto;
+            background: steelblue;
+            flex-basis: 50rem;
+            height: 65vh;
+            margin: 1rem;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            perspective: 1000px;
+        }
+
+        .imgflx {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            overflow: hidden;
+        }
+
+        /*
+        .container-item:hover .card {
+            transform: rotateY(180deg);
+        }
+        */
+
+
+        .btn:active~.card {
+            transform: rotateY(180deg);
+        }
+
+        #btn:hover+.container-item>.card {
+            transform: rotateY(180deg);
+        }
+
+        .card {
+            position: relative;
+            transition: 0.5s all;
+            transform-style: preserve-3d;
+        }
+
+        .front,
+        .back {
+            position: absolute;
+            backface-visibility: hidden;
+        }
+
+        .front {
+            z-index: 1;
+            transform: rotateY(180deg);
+            text-align: center;
+            align-self: center;
+        }
+
+        .back {
+            z-index: 2;
+            transform: rotateY(0deg);
+        }
+
+        .signup-form {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .signup-form-item {
+            flex: 0 1 auto;
+            align-self: center;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"]{
+            width: 30rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1 id="btn">LOL</h1>
+
+        <div class="container-item">
+            <div class="card">
+                <div class="front">
+                    <div class="signup-form">
+                        <div class="signup-form-item">
+                            <input type="text" name="username" id="">
+                        </div>
+                        <div class="signup-form-item">
+                            <input type="email" name="email" id="">
+                        </div>
+                        <div class="signup-form-item">
+                            <input type="password" name="password" id="">
+                        </div>
+                        <div class="signup-form-item">
+                            <input type="submit" value="SAVE">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="back">
+                    <img class="imgflx" src="https://i.redd.it/f5vu2auetgxz.png" alt="back" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
