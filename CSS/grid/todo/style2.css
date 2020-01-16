@@ -228,6 +228,23 @@ body,html{
     color: fuchsia;
 }
 
+.linear-wipe:hover {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 1.2em;
+	font-weight:bold;
+	letter-spacing: 2em;
+	text-align: center;
+    color: #f16785;
+    border-bottom: .2rem solid #326dbb;
+	background-image: -webkit-linear-gradient(92deg, #df70ee, #6ae46a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 2s infinite linear;
+    animation: hue 2s infinite linear;
+    transition: 2s;
+}
+
 .fa-arrow-left:hover ~ .linear-wipe {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 	font-size: 1.2em;

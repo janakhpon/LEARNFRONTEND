@@ -236,6 +236,12 @@ textarea:active{
     grid-template-rows: auto;
     grid-gap: 0.2rem;
 }
+.post-actions > .post-actions-btn{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
 
 .post-actions > .post-actions-btn > .btn-save > a {
     outline: none;
@@ -252,6 +258,7 @@ textarea:active{
     border-radius: 0.2rem;
     font-weight: bold;
     cursor: pointer;
+    transition: 1s;
 }
 
 .post-actions > .post-actions-btn > .btn-save:hover{
@@ -265,20 +272,28 @@ textarea:active{
     font-weight: bolder;
 }
 
-.post-actions > .post-actions-btn > a> .btn-danger{
+.post-actions > .post-actions-btn > .btn-danger > a{
+
+    color: white;
+    outline: none;
+    text-decoration: none;
+}
+
+
+.post-actions > .post-actions-btn > .btn-danger{
     margin: 0.2rem 0.5rem 0.2rem 0.5rem;
     color: white;
     background-color: #e71d36;
-    width: 8.5rem;
-    height: 2.5rem;
-    border-radius: 0.1rem;
+    width: 8rem;
+    height: 2.3rem;
+    border-radius: 0.2rem;
     font-weight: bolder;
     transition: 1s;
     font-weight: bold;
     cursor: pointer;
 }
 
-.post-actions > .post-actions-btn > a> .btn-danger:hover {
+.post-actions > .post-actions-btn > .btn-danger:hover {
     margin: 0.2rem 0.5rem 0.2rem 0.5rem;
     color: white;
     background-color: #a80719;
